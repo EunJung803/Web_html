@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script>
+      function getSum() {
+        var n = parseInt(document.getElementById("n").value, 10);
+        var m = parseInt(document.getElementById("m").value, 10);
+        var talk = "더하기 : "
+        var result = String(n + m)
+        document.getElementById("sumResult").innerHTML = (talk + result)
+      }
+
+      function getSub() {
+        var n = parseInt(document.getElementById("n").value, 10);
+        var m = parseInt(document.getElementById("m").value, 10);
+        var talk = "빼기 : "
+        var result = String(n - m)
+        document.getElementById("subResult").innerHTML = (talk + result)
+      }
+
+      function getMul() {
+        var n = parseInt(document.getElementById("n").value, 10);
+        var m = parseInt(document.getElementById("m").value, 10);
+        var talk = "곱하기 : "
+        var result = String(n * m)
+        document.getElementById("mulResult").innerHTML = (talk + result)
+      }
+
+      function getDiv() {
+        var n = parseInt(document.getElementById("n").value, 10);
+        var m = parseInt(document.getElementById("m").value, 10);
+        var talk = "나누기 : "
+        var result = String(n / m)
+        document.getElementById("divResult").innerHTML = (talk + result)
+      }
+    </script>
+
+  </head>
+  <body>
+    <input type="text" id="n" value="">
+    <br>
+    <input type="text" id="m" value="">
+    <br>
+    <button type="button" name="button" onclick="getSum(); getSub(); getMul(); getDiv()">계산하기</button>
+
+    <p id = sumResult></p>
+    <p id = subResult></p>
+    <p id = mulResult></p>
+    <p id = divResult></p>
+
+  </body>
+</html>

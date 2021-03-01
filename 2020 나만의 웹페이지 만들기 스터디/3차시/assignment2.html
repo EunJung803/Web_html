@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script>
+
+      function calculate() {
+        var year = document.getElementById("year").value;
+        var i;
+        var int_year;
+
+        int_year = Number(year.substr(0, 4));
+        if( int_year%4 == 0 ) {
+          if( int_year%100 == 0 ){
+              if( int_year%400 == 0 ){
+                  document.getElementById("result").innerHTML ="윤년입니다."
+                  return;
+                }
+
+                document.getElementById("result").innerHTML ="윤년이 아닙니다."
+                return;
+              }
+
+            document.getElementById("result").innerHTML ="윤년입니다."
+            return;
+          }
+
+        document.getElementById("result").innerHTML ="윤년이 아닙니다."
+        return;
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+    <input type="text" id="year" value="">
+    <br>
+    <button type="button" name="button" onclick="calculate()">계산하기</button>
+    <p id = result></p>
+
+  </body>
+</html>
